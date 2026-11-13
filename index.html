@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgroMarket · Hora de vender</title>
+<meta name="description" content="Mostra ao produtor de soja se o preço de hoje é bom para vender, comparando com a mesma época dos últimos cinco anos, a posição dos fundos em Chicago e o câmbio.">
+<link rel="icon" href="assets/icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="sidebar" aria-label="Menu principal">
+    <a class="brand" href="#/visao">
+      <svg width="48" height="48" viewBox="0 0 56 56" aria-hidden="true"><ellipse cx="28" cy="28" rx="24" ry="17" transform="rotate(-35 28 28)" fill="#9CCB4F"/><path d="M14 38 C24 30 32 24 42 16" stroke="#1F4D2E" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <span class="wordmark">Agro<span>Market</span></span>
+      <span class="tagline">Dados que conectam o campo ao mercado</span>
+    </a>
+    <div class="navlist">
+      <a class="nav" href="#/visao" data-route="visao">Visão geral</a>
+      <a class="nav" href="#/preco" data-route="preco">Preço na época</a>
+      <a class="nav" href="#/fundos" data-route="fundos">Fundos em Chicago</a>
+      <a class="nav" href="#/cambio" data-route="cambio">Câmbio</a>
+      <a class="nav" href="#/oferta" data-route="oferta">Avaliar oferta</a>
+      <a class="nav" href="#/metodo" data-route="metodo">Como calculamos</a>
+    </div>
+    <div class="team">Ana Cades, Amanda Vargas,<br>Murilo, Matheus</div>
+  </nav>
+
+  <main id="main" class="main" tabindex="-1">
+    <div class="topbar">
+      <label class="datepick">
+        <span>Ver o mercado como estava em</span>
+        <input type="date" id="dataAnalise">
+      </label>
+      <button type="button" id="hoje" class="btn-ghost">Último dia disponível</button>
+    </div>
+    <div id="view" aria-live="polite">
+      <p class="loading">Carregando dados…</p>
+    </div>
+  </main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
